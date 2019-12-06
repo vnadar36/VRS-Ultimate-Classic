@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>
+registration
+</title>
+<script type="text/javascript">
+function validate()
+{
+if(document.registration.fname.value=="")
+{alert("Enter a valid First Name!");
+document.registration.fname.focus();
+}
+else if(document.registration.uname.value=="")
+{alert("Enter a valid User Name!");
+document.registration.uname.focus();
+}
+else if(document.registration.dob.value=="")
+{alert("Enter a valid date of birth!");
+document.registration.dob.focus();
+}
+else if(document.registration.email.value=="")
+{alert("Enter a valid E-mail ID!");
+document.registration.email.focus();
+}
+else if(document.registration.pass.value=="")
+{alert("Enter Password!");
+document.registration.pass.focus();
+}
+else if(document.registration.cpass.value=="")
+{alert("Confirm Password!");
+document.registration.cpass.focus();
+}
+if(document.registration.cpass.value.match(document.registration.pass.value))
+{
+}
+else 
+{alert("Password and Confirm password must be same!");
+document.registration.cpass.focus();
+}
+}
+</script>
+<head>
+<style>
+h3
+{
+font-size:40;
+color:white;
+}
+body 
+{
+font-family:Baskerville Old Face;
+text-align: center;
+font-size:20px;
+}
+h1
+{color:white;
+font-size:70px}
+.button {
+  background-color: #ffffff;
+  border: none;
+  color: black;
+font-family:Baskerville Old Face;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 55px;
+}
+.button1 {
+  background-color: #ffffff;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 45px;
+}
+.button2 {
+  color: white;
+font-family:Baskerville Old Face;
+  font-size: 55px;
+}
+</style>
+<body align="center" bgcolor="#154360">
+<b> <i>
+<form method="post" action="registerre.php" name="registration">
+<h1>REGISTRATION </h1> <br>
+<ul type="disc">
+<li> <font class="button1">FirstName </font>
+<input type="text" name="fname" class="button1"> <br> <br></li>
+<li> <font class="button1">LastName </font>
+<input type="text" name="lname" class="button1"> <br> <br></li>
+<li><font class="button1">UserName </font>
+<input type="text" name="uname" class="button1"><br> <br></li>
+<li><font class="button1">Date Of Birth </font>
+<input type="text" name="dob" class="button1"><br> <br></li>
+Insert Date in the format of YYYY-MM-DD <br>
+<li><font class="button1">Email</font>
+<input type="text" name="email" class="button1"><br> <br></li>
+<li><font class="button1">Password </font>
+<input type="password" name="pass" class="button1"><br> <br></li>
+<li><font class="button1">ConfirmPassword</font>
+<input type="password" name="cpass" class="button1"><br> <br></li>
+</ul>
+<h3>Fill every detail before Registration! </h3>
+<input type="submit" value="REGISTER" class="button" onclick="validate();">
+</form>
+</form>
+<h3>
+Already have an Account? <a href="login1.html" class="button2"> LOGIN </a>
+</h3>
+</body>
+</html>
